@@ -1,4 +1,5 @@
 #include "mbed.h"
+#include <cstdio>
 
 // Date Type ComplexNumber_C
 typedef struct {
@@ -18,6 +19,16 @@ int main() {
     
     //Create and Initialise 
     ComplexNumber_C q = {1.0, 1.0};
+
+    ComplexNumber_C y;
+    y.real = p.real + q.real;
+    y.imag = p.imag + q.imag;
+
+    printf("(%f) + (%fi)\n", y.real, y.imag);
+
+ 
+
+    
 
     // TASK:
     // Create another complex number y
